@@ -6,15 +6,81 @@
 	},
 	"item": [
 		{
-			"name": "FetchedAlltodos",
+			"name": "all todos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4101/api/v1/todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4101",
+					"path": [
+						"api",
+						"v1",
+						"todos"
+					]
+				}
 			},
 			"response": []
 		},
 		{
-			"name": "create todo",
+			"name": "updated todo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwcmFzaGFudCIsImF1ZCI6InRlc3RBcHAiLCJpc3MiOiJNeVNlY3VyaXR5QXBwIiwiZXhwIjoxNjg5NTM4MzY2LCJpYXQiOjE2ODk1MjAzNjZ9.SU6tjDQJJOxrWkBBeDhx2HloPY500bpMpLIq3yZcyxwdwyC9iamuaWZSzjYmlPsfQnSz4VZRxU0Au-UzM9LuLg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" :\"test10\",\r\n    \"completed\": true,\r\n    \"orderNumber\":1001\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4101/api/v1/todos/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4101",
+					"path": [
+						"api",
+						"v1",
+						"todos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new todo",
 			"request": {
 				"auth": {
 					"type": "bearer",
