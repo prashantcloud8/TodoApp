@@ -16,4 +16,4 @@ Step 3.  check out this project using git clone https://github.com/prashantcloud
 Step 4.  open this project in IDE
 Step 5.  run this application
 Step 6:  open postman and import postman collection 
-         and test it with http://localhost:4101/api/v1/todos
+         and test it with http://localhost:4101/api/todos
