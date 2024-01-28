@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 
 
 @RestController
-@RequestMapping(value = "/api/v1/todos")
+@RequestMapping(value = "/api/todos")
 public class TodoController {
 
     private TodoService todoService;
